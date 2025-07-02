@@ -25,7 +25,7 @@ export default function Sidebar({ setChat, closeMenu }) {
                     sx={{
                         width: 1,
                         justifyContent: 'flex-end',
-                        color: mode == 'light' ? 'primary.dark' :'text.primary'
+                        color: mode === 'light' ? 'primary.dark' :'text.primary'
                     }}
                     onClick={closeMenu}
                 >
@@ -34,7 +34,7 @@ export default function Sidebar({ setChat, closeMenu }) {
             )}
 
             <Link to={'/'} style={{ textDecoration: 'none' }}>
-                <Stack
+                <Button
                     onClick={() => {
                         setChat([])
                         closeMenu()
@@ -73,7 +73,7 @@ export default function Sidebar({ setChat, closeMenu }) {
 
                     <AddCommentIcon sx={{ color: 'text.primary' }} />
 
-                </Stack>
+                </Button>
             </Link>
 
             <Box p={{xs:2, md:3}}>
